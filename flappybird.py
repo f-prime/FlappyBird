@@ -44,7 +44,7 @@ class FlappyBird:
             self.dead = True
         if downRect.colliderect(self.bird):
             self.dead = True
-        if self.bird[1] > 720:
+        if not 0 < self.bird[1] < 720:
             self.bird[1] = 50
             self.birdY = 50
             self.dead = False
