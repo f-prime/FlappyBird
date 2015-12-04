@@ -78,7 +78,6 @@ class FlappyBird:
                     self.gravity = 5
                     self.jumpSpeed = 10
 
-
             self.screen.fill((255, 255, 255))
             self.screen.blit(self.background, (0, 0))
             self.screen.blit(self.wallUp,
