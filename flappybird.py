@@ -73,7 +73,7 @@ class FlappyBird:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
-                if event.type == pygame.KEYDOWN and not self.dead:
+                if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN and not self.dead:
                     self.jump = 17
                     self.gravity = 5
                     self.jumpSpeed = 10
