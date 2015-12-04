@@ -73,10 +73,11 @@ class FlappyBird:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
-                if event.type == pygame.KEYDOWN and not self.dead:
+                if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN and not self.dead:
                     self.jump = 17
                     self.gravity = 5
                     self.jumpSpeed = 10
+
 
             self.screen.fill((255, 255, 255))
             self.screen.blit(self.background, (0, 0))
