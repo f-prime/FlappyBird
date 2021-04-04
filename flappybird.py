@@ -100,4 +100,17 @@ class FlappyBird:
             pygame.display.update()
 
 if __name__ == "__main__":
+    pygame.init()
+    screen = pygame.display.set_mode((400, 708))
+    loop = True
+    background_image = pygame.image.load("assets/startscreen.png").convert()
+    IMAGE_SMALL = pygame.transform.scale(background_image, (400, 708))
+    while loop:
+        screen.blit(IMAGE_SMALL, [0, 0])
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            if event.type == pygame.KEYDOWN or event.type == pygame.MOUSEBUTTONDOWN:
+                loop = False
+        pygame.display.flip()
     FlappyBird().run()
